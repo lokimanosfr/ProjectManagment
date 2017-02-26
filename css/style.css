@@ -1,67 +1,96 @@
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	/* you need to set this to assign to the main element a min height of 100% */
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+
+}
+
+a:hover {
+	color: #6cac70;
+	text-decoration: none;
+
+}
+
 header {
-  z-index: 3;
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+	z-index: 3;
+
+	/* Force Hardware Acceleration in WebKit */
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 }
 header.lateral-menu-is-open {
-  /* translate to show the lateral menu */
-  -webkit-transform: translateX(260px);
-  -moz-transform: translateX(260px);
-  -ms-transform: translateX(260px);
-  -o-transform: translateX(260px);
-  transform: translateX(260px);
+	/* translate to show the lateral menu */
+	-webkit-transform: translateX(260px);
+	-moz-transform: translateX(260px);
+	-ms-transform: translateX(260px);
+	-o-transform: translateX(260px);
+	transform: translateX(260px);
 }
 header.is-fixed {
-  position: fixed;
+	position: fixed;
 }
 
 #slidebar_left{
-	
-	font-size: 18px;
-	background-color: #A09E9E;
+	padding-top: 40px;
+	padding-left: 20px;
+	font-size: 15px;
+	background-color: #222222;
 	position: fixed;
 	height: 100%;
 	left: -260px;
 	top:0;
 	width: 260px;
 	visibility: hidden;
-  /* the secondary navigation is covered by the main element */
-  z-index: 1;
-  width: 260px;
-  background-color: #242e30;
-  overflow-y: auto;
-/* Force Hardware Acceleration in WebKit */
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
-  -moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
-  transition: transform .4s 0s, visibility 0s .4s;
-  /* this creates the subtle slide in animation of the navigation */
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  -ms-transform: translateX(0px);
-  -o-transform: translateX(0px);
-  transform: translateX(0px);
+	the secondary navigation is covered by the main element
+	z-index: 1;
+	width: 260px;
+	
+	overflow-y: auto;
+	Force Hardware Acceleration in WebKit
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
+	-moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
+	transition: transform .4s 0s, visibility 0s .4s;
+	this creates the subtle slide in animation of the navigation
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	transform: translateX(0px);
 }
 #slidebar_left.lateral-menu-is-open {
-  -webkit-transform: translateX(260px);
-  -moz-transform: translateX(260px);
-  -ms-transform: translateX(260px);
-  -o-transform: translateX(260px);
-  transform: translateX(260px);
-  visibility: visible;
-  -webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
-  -moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
-  transition: transform .4s 0s, visibility 0s 0s;
-  /* smooth the scrolling on touch devices - webkit browsers */
-  -webkit-overflow-scrolling: touch;
+	-webkit-transform: translateX(260px);
+	-moz-transform: translateX(260px);
+	-ms-transform: translateX(260px);
+	-o-transform: translateX(260px);
+	transform: translateX(260px);
+	visibility: visible;
+	-webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
+	-moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
+	transition: transform .4s 0s, visibility 0s 0s;
+	/* smooth the scrolling on touch devices - webkit browsers */
+	-webkit-overflow-scrolling: touch;
 }
 
 .ul_nav{
@@ -69,6 +98,120 @@ header.is-fixed {
 	padding-left: 5px;
 	margin: 10px 0 16px;
 }
+ul li{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+ul li a{
+	/* display: block;
+	text-decoration: none; */
+
+}
+
 .main_content{
-	padding-top: 60px;
+	min-height: 100%;
+	position: relative;
+
+	z-index: 2;
+	margin-top: 50px;
+	padding: 20px 20px 20px 20px;
+	/* Force Hardware Acceleration in WebKit */
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;  -webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.main_content.lateral-menu-is-open {
+	/* translate to show the lateral menu - all content needs to be put in the .cd-main-content to translate*/
+	-webkit-transform: translateX(260px);
+	-moz-transform: translateX(260px);
+	-ms-transform: translateX(260px);
+	-o-transform: translateX(260px);
+	transform: translateX(260px);
+}
+
+.navbar-brand{
+	font-size: 20px;
+}
+.title{
+	font-size: 24px;
+}
+
+.push {
+  list-style: none;
+  font-family: "Lucida Sans";
+}
+.push li {
+  position: relative;
+  padding: 20px 0px 0px 25px;
+  color: #D29D25;
+  font-variant: small-caps;
+  font-weight: bold;
+  cursor: pointer;
+}
+.push li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 27px;
+}
+/* .push li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 48px;
+} */
+.push li:hover:before{
+  box-shadow: 0 0 0 10px #6cac70;
+}
+.push li:last-child:after {
+  content: none;
+}
+
+/* #slidebar_left .item-has-children > a {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600; */
+  /* this is the right arrow to show that the item has a submenu  */
+}
+#slidebar_left .item-has-children > a::after {
+/*   content: '';
+display: block;
+height: 11px;
+width: 8px;
+position: absolute;
+top: 50%;
+bottom: auto; */
+/*   -webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+right: 1em; */
+  /* background: url("../img/cd-arrow.svg") no-repeat center center;
+  background-size: 8px 11px; */
+/*   -webkit-transition-property: -webkit-transform;
+-moz-transition-property: -moz-transform;
+transition-property: transform;
+-webkit-transition-duration: 0.2s;
+-moz-transition-duration: 0.2s;
+transition-duration: 0.2s; */
+}
+#slidebar_left .item-has-children > a.submenu-open::after {
+/*   -webkit-transform: translateY(-50%) rotate(90deg);
+-moz-transform: translateY(-50%) rotate(90deg);
+-ms-transform: translateY(-50%) rotate(90deg);
+-o-transform: translateY(-50%) rotate(90deg);
+transform: translateY(-50%) rotate(90deg); */
 }

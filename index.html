@@ -22,6 +22,7 @@
       <![endif]-->
     </head>
     <body>
+
       <header>
         <div class="container-fluid header">
           <nav class="navbar navbar-inverse navbar-fixed-top "  role="navigation">
@@ -29,7 +30,7 @@
               <div class="row">
                  <div class="col-md-8 col-md-push-4 navbar-header">
             
-                <a href="#" class="navbar-brand">Управление проектами</a>
+                <a href="#" class="navbar-brand title">Управление проектами</a>
               </div>
               <div class="col-md-4 col-md-pull-8 text-left" >
                 
@@ -44,15 +45,19 @@
 
 
       </header>
-      <main class="main_content">
+      <div class="row">
+        <div class="">
+          <main class="main_content">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit praesentium, corrupti tempore possimus ducimus, assumenda nisi distinctio, cumque in veritatis dolorum aperiam hic fugiat quo. Explicabo excepturi placeat, saepe praesentium ducimus laborum provident aliquam corrupti, eveniet quidem qui corporis! Perspiciatis amet alias, reiciendis quae voluptate, at perferendis. At modi sit voluptatum dicta, totam ex enim illo accusantium suscipit atque voluptatibus fuga quo neque sequi non explicabo nostrum iusto earum impedit distinctio asperiores a eum eius. Vero blanditiis, modi odio quidem eum expedita deserunt, libero magni rem alias voluptatibus itaque earum et delectus suscipit eveniet. Quae sapiente eum asperiores cumque sint necessitatibus ullam modi, at quod architecto earum, sit laborum veritatis unde, eos consequatur. Pariatur aliquam sint vero, minus quaerat atque.
       </main>
+        </div>
+      </div>
       <nav id="slidebar_left">
         <ul class="ul_nav">
           <li class="active"><a href="#"><i class="fa fa-home fa-lg"></i>&nbsp;Содержание дисциплины</a></li>
-          <li class="dropdown" >
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leanpub fa-lg"></i>&nbsp;Лекции&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu" id="lections">
+          <li class="item-has-children" >
+            <a href="#"><i class="fa fa-leanpub fa-lg"></i>&nbsp;Лекции&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="sub-menu push" id="lections">
               <li><a onclick="show_content('lec1')" href="#lec1">Лекция 1</a></li>
               <li><a onclick="show_content('lec2')" href="#lec2">Лекция 2</a></li>
               <li><a onclick="show_content('lec3')" href="#lec3">Лекция 3</a></li>
@@ -61,7 +66,17 @@
             </ul>
 
           </li>
-          <li><a href="#"><i class="fa fa-puzzle-piece fa-3x"></i>&nbsp;Лабораторные работы</a></li>
+          <li class="item-has-children">
+            <a href="#"><i class="fa fa-puzzle-piece fa-lg"></i>&nbsp;Лабораторные работы&nbsp; <i class="fa fa-arrow-down fa-1x"></i> </a>
+            <ul class="sub-menu" id="lab">
+              <li><a onclick="show_content('lab1')" href="#lab1">Лабораторная работа 1</a></li>
+              <li><a onclick="show_content('lab2')" href="#lab2">Лабораторная работа 2</a></li>
+              <li><a onclick="show_content('lab3')" href="#lab3">Лабораторная работа 3</a></li>
+              <li><a onclick="show_content('lab4')" href="#lab4">Лабораторная работа 4</a></li>
+              <li><a onclick="show_content('lab5')" href="#lab5">Лабораторная работа 5</a></li>
+            </ul>
+          
+          </li>
           <li><a href="#"><i class="fa fa-gift fa-lg"></i>&nbsp;Материалы</a></li>
           <li><a href="#"><i class="fa fa-user fa-lg"></i>&nbsp;Тесты</a></li>
           <li><a href="#"><i class="fa fa-file-word-o fa-lg"></i>&nbsp;Курсовая работа</a></li>
