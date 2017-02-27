@@ -27,7 +27,7 @@ a:hover {
 }
 
 header {
-	z-index: 3;
+	
 
 	/* Force Hardware Acceleration in WebKit */
 	-webkit-transform: translateZ(0);
@@ -52,7 +52,7 @@ header.is-fixed {
 }
 
 #slidebar_left{
-	padding-top: 40px;
+	padding-top: 60px;
 	padding-left: 20px;
 	font-size: 16px;
 	background-color: #222222;
@@ -62,18 +62,18 @@ header.is-fixed {
 	top:0;
 	width: 260px;
 	visibility: hidden;
-	the secondary navigation is covered by the main element
+	/* the secondary navigation is covered by the main element */
 	z-index: 1;
 	width: 260px;
 	
 	overflow-y: auto;
-	Force Hardware Acceleration in WebKit
+/* 	Force Hardware Acceleration in WebKit */
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	-webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
 	-moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
 	transition: transform .4s 0s, visibility 0s .4s;
-	this creates the subtle slide in animation of the navigation
+	/* this creates the subtle slide in animation of the navigation */
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
 	-ms-transform: translateX(0px);
