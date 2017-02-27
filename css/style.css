@@ -16,12 +16,13 @@ html, body {
 }
 
 body {
+	font-family: "Lucida Sans";
 
 }
 
 a:hover {
 	color: #6cac70;
-	text-decoration: none;
+	/* text-decoration: none; */
 
 }
 
@@ -53,7 +54,7 @@ header.is-fixed {
 #slidebar_left{
 	padding-top: 40px;
 	padding-left: 20px;
-	font-size: 15px;
+	font-size: 16px;
 	background-color: #222222;
 	position: fixed;
 	height: 100%;
@@ -97,24 +98,37 @@ header.is-fixed {
 	list-style: none;
 	padding-left: 5px;
 	margin: 10px 0 16px;
+
+}
+a:focus, a:hover, a:before{
+	text-decoration: none;
+}
+a:focus{
+	color: #6cac70; 
 }
 ul li{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 ul li a{
-	/* display: block;
-	text-decoration: none; */
+	display: block;
+	/* text-decoration: none; */
+	color: white;
+	text-align: left;
+
 
 }
 
+ul li ul{
+	padding-left: 20px;
+}
 .main_content{
 	min-height: 100%;
 	position: relative;
 
 	z-index: 2;
 	margin-top: 50px;
-	padding: 20px 20px 20px 20px;
+	padding: 20px 80px 20px 80px;
 	/* Force Hardware Acceleration in WebKit */
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;  -webkit-transition-property: -webkit-transform;
@@ -142,7 +156,7 @@ ul li a{
 
 .push {
   list-style: none;
-  font-family: "Lucida Sans";
+  
 }
 .push li {
   position: relative;
@@ -157,7 +171,7 @@ ul li a{
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #4F5151;
+
   content: "";
   left: 0;
   transition: .3s ease-in-out;
@@ -174,6 +188,8 @@ ul li a{
 } */
 .push li:hover:before{
   box-shadow: 0 0 0 10px #6cac70;
+  color: #6cac70;
+
 }
 .push li:last-child:after {
   content: none;
